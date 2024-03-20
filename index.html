@@ -1,24 +1,222 @@
-
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <title>Document</title>
 </head>
 <body>
-   <div class="flex-container " id="top">
-    <h1 class="flex-container">top div</h1>
-   </div> 
-   <div class="flex-container " id="title">
-    <h1>title</h1>
-   </div> 
-   <div class="three-columns">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>
+
+<!-- title/landing -->
+  <section class="hero is-medium is-link" style="background-color: #243E73">
+    <div class="hero-body">
+      <p class="title">
+        My Personalized, Snazzy Weather Scheduler.
+      </p>
+      <p class="subtitle">
+        For all my daily scheduling needs.
+      </p>
+    </div>
+  </section>
+ 
+ <!-- navigation bar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <style>
+        .navbar, 
+        .navbar-brand {
+          background-color: #011140;
+          color: white;
+        }
+      </style>
+      <a class="navbar-item">
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <style>
+          .navbar-item {
+            color: white;
+          }
+          </style>
+          <a class="navbar-item">
+          Home
+        </a>
+        <a class="navbar-item">
+          Blank Tab
+        </a>
+      </style>
+    </div>
+  </div>
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="button is-primary">
+          <strong>Sign up</strong>
+        </a>
+        <a class="button is-light">
+              Log in
+            </a>
+            <style>
+            .button.is-light { 
+              background-color: #75B8BF;
+              color: white;
+            }
+
+            .button.is-light:hover { 
+              background-color: #243E73;
+              color: white;
+            }
+
+            .button.is-primary {
+              background-color: #75B8BF;
+              color: white;
+            }
+
+            .button.is-primary:hover {
+              background-color: #243E73;
+              color: white;
+            }
+          </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+ 
+<!-- new column, current weather API -->
+  <div class="columns">
+
+  <div class="column is-one-fifth">
+    <h3 class="title is-3">Current Weather</h3>
    
+
+    <div id="input">
+      <form action="/action_page.php">
+        <h5 class="title is-5 mb-3">Latitude:</h5>
+
+        <input class="input is-medium" type="text" id="lat" name="lat" placeholder="Enter latitude" /><br />
+        
+        <h5 class="title is-5 mt-2 mb-3">Longitude:</h5>
+        <input class="input is-medium" type="text" id="lon" name="lon" placeholder="Enter longitude" /><br /><br />
+        <a class="button is-primary"><strong>Submit</a></strong>
+        <style>
+          .button.is-primary {
+            background-color: #243E73;
+          }
+          .button.is-primary:hover {
+            background-color: white;
+            color: #243E73;
+          }
+          .title {
+            color: #243E73;
+
+          }
+        </style>
+      </form>
+    </div>
+
+    <style>
+      .column {
+        background-color: #75B8BF;
+        color: #243E73;
+        /* padding: 10px; */
+        margin: 30px;
+        border-radius: 4px;
+      }
+      </style>
+
+<div id="weather"></div>
+<label for="temp">Temperature:</label><br />
+<label for="humidity">Humidity:</label><br />
+<label for="feels_like">Feels Like:</label><br />
+<label for="temp_max">Today's High:</label><br />
+<label for="temp_min">Today's Low:</label><br />
+<label for="pressure">Pressure:</label><br />
+</div>
+
+<!-- new column -->
+<div class="column is-two-fifths">
+  <div>
+        
+    <h3 class="title is-3">My Daily To-Do List:</h3> 
+    <form id="myForm">
+        <label for="inputField"><h4 class="title is-4 mb-2">Enter a task for your daily to-do list.</h4>
+        </label>
+        <input class="floatLeft input is-large" type="text" id="addBtn" name="inputField">
+
+        <style>
+          .inputField {
+            padding: 10px;
+          }
+        </style>
+
+<!-- to do list column -->
+    <p id="Todo-entry-box"> 
+      <div class="field is-grouped is-grouped-right">
+        <div class="control">
+      <div class="buttons">
+        <a class="button is-primary mt-2">
+          <strong>Submit</strong>
+        </a>
+        <style>
+        .button.is-primary {
+          background-color: #243E73;
+      }
+        </style>
+        <style>
+        .button.is-primary.is-hovered {
+          background-color: #243E73;
+          color: white;
+        }
+        </style>
+    </p> 
+  </div>
+</div>
+</div>
+    <!--This is where the task list will populate-->
+    <ol id="todo-list">
+      <!-- <div class="box" style="width: 555px;"> -->
+        <ul>
+          <div class="box custom-box">Item 1</div>
+      <div class="box custom-box">Item 2</div>
+      <div class="box custom-box">Item 3</div>
+      <div class="box custom-box">Item 4</div>
+      
+        </ul>
+      </div>
+
+      <style>
+        .custom-box:nth-child(even) {
+          background-color: #243E73; /* Even row color */
+          color: white;
+        }
+      
+        .custom-box:nth-child(odd) {
+          background-color: whitesmoke; /* Odd row color */
+        }
+      </style>
+        <!-- List items will be added dynamically using JavaScript -->
+    </ol>
+</div>
+
+<!-- second API title here, third column -->
+<div class="column">
+  <h3 class="title is-3">Second API Goes Here</h3>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js" integrity="sha512-mlRoH3bU+q4t5clJkMwltJcka6JyNWsUJybBclHUiU0Bdux6LtcNqO8XMNi9/vp4+KCteAbc0hYnHU4Rh2SH+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
