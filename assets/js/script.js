@@ -8,8 +8,6 @@ const weatherIcon = document.querySelector('.weather-icon');
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-    
-
 if(response.status == 404){
     document.querySelector('.error').style.display = 'block';
     document.querySelector('.weather').style.display = 'none';
@@ -44,15 +42,6 @@ else {
 
     
 }
-var saveCity = (newCity) => {
-    let cityExists = false;
-    // Check if City exists in local storage
-    for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage["cities" + i] === newCity) {
-            cityExists = true;
-            break;
-        }
-    }}
 
 searchBtn.addEventListener('click', ()=> {
     checkWeather(searchBox.value);
