@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+   <div class="flex-container " id="top">
+    <h1 class="flex-container">top div</h1>
+   </div> 
+   <div class="flex-container " id="title">
+    <h1>title</h1>
+   </div> 
+   <div class="three-columns">
+    <div>1</div>
+    
+    
+    <!--This div is for the task list-->
+    <div>
+        
+        <h1 class="center">To Do List</h1> 
+        <form id="myForm">
+            <label for="inputField"><h3 >Enter a task to add to the list:</h3>
+            </label>
+            <input class="floatLeft" type="text" id="addBtn" name="inputField">
+        <p id="Todo"> 
+            <button type="submit"  id="todo-entry-box" class="floatRight">Submit</button>
+        </p> 
+        <br>
+        <br>
+        <!--This is where the task list will populate-->
+        <ol id="todo-list">
+            <!-- List items will be added dynamically using JavaScript -->
+        </ol>
+    
+    </div>
+    <div>3</div>
+</div>
+</div>
+
+
+
+   
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

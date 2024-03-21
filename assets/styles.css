@@ -1,0 +1,40 @@
+.flex-container {
+  display: flex;
+  border: black;
+  justify-content: center;
+  border-color: black;
+  border-style: solid;
+  align-items: center;
+}
+.three-columns {
+  display: flex;
+}
+
+/* columns */
+.three-columns > * {
+  width: calc(100% / 3);
+  padding: 1rem;
+  border: 1px solid black;
+}
+.center {
+  text-align: center;
+}
+.floatRight {
+  float: right;
+}
+.floatLeft {
+  float: left;
+}
+.btn-primary{
+  background-color: blueviolet;
+  color:white;
+  padding-left: 1%;
+  margin-left: 5%;
+
+}
+
+li{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
