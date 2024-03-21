@@ -37,7 +37,7 @@ async function checkNews(topic) {
 }
 
 async function checkWeather(city) {
-    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    const response = await fetch(weatherApiUrl + city + `&appid=${weatherApiKey}`);
 
 if(response.status == 404){
     document.querySelector('.error').style.display = 'block';
