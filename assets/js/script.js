@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function() {
   const addBtn = document.querySelector('#addBtn');
   const submit = document.getElementById("submit");
@@ -136,6 +137,103 @@ function addLists(event) {
 if (addBtn) {
   addBtn.addEventListener('click', addLists);
 }
+=======
+const apiKey = '8a9ec15361cbfa604cbdb667ea99a47c';
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
+
+const searchBox = document.querySelector('.search input');
+const searchBtn = document.querySelector('.search button');
+const weatherIcon = document.querySelector('.weather-icon');
+
+async function checkWeather(city) {
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+if(response.status == 404){
+    document.querySelector('.error').style.display = 'block';
+    document.querySelector('.weather').style.display = 'none';
+}
+else {
+    var data = await response.json();
+
+    document.querySelector('.city').innerHTML = data.name;
+    document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°F';
+    document.querySelector('.humidity').innerHTML = data.main.humidity + '%';
+    document.querySelector('.wind').innerHTML = data.wind.speed + 'mp/h';
+    
+
+    if(data.weather[0].main == 'Clouds') {
+        weatherIcon.src = 'assets/images/images/clouds.png';
+    }
+    else if(data.weather[0].main == 'Clear') {
+        weatherIcon.src = 'assets/images/images/clear.png';
+    }
+    else if(data.weather[0].main == 'Rain') {
+        weatherIcon.src = 'assets/images/images/rain.png';
+    }
+    else if(data.weather[0].main == 'Drizzle') {
+        weatherIcon.src = 'assets/images/images/drizzle.png';
+    }
+    else if(data.weather[0].main == 'Mist') {
+        weatherIcon.src = 'assets/images/images/mist.png';
+    }
+
+    document.querySelector('.weather').style.display = 'block';
+}
+
+    
+}
+
+searchBtn.addEventListener('click', ()=> {
+    checkWeather(searchBox.value);
+})
+// create variables
+//const toggleBtn = document.querySelector('#toggleBtn');
+//const divList = document.querySelector('.listHolder');
+//todo-entry-box
+//addBtn
+//
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  const addInput = document.querySelector('#addBtn');
+  const addBtn = document.querySelector('#todo-entry-box');
+  
+  function addLists(event) {
+    event.preventDefault();
+    if (addInput.value === '') {
+      console.log ("empty")
+    } else {
+      console.log(addInput.value)
+      var ol = document.getElementById ("todo-list");
+      var li = document.createElement('li');
+      li.innerHTML = addInput.value;
+      addInput.value = '';
+      ol.appendChild(li);
+      //createBtn(li);
+      
+      
+      
+      
+    }
+  }
+  
+  // add list when clicked on add item button
+  addBtn.addEventListener('click',addLists);
+
+})
+
+
+
+
+/* 
+3. create action buttons
+------------------------
+>>>>>>> 63d9106efa5d77802ff5a6b95f292c7e89e0d502
 
 // create variables
 const listUl = document.querySelector('.list');
@@ -165,6 +263,15 @@ for (var i = 0; i < lis.length; i++) {
   createBtn(lis[i]);
 }
 
+<<<<<<< HEAD
+=======
+
+/* 
+4. enabling button actions (to move item up, down or delete)
+------------------------------------------------------------
+*/
+/*
+>>>>>>> 63d9106efa5d77802ff5a6b95f292c7e89e0d502
 divList.addEventListener('click', (event) => {
   if (event.target.tagName === 'BUTTON') {
     const button = event.target;
@@ -184,4 +291,9 @@ divList.addEventListener('click', (event) => {
       }
     }
   }
+<<<<<<< HEAD
 });
+=======
+});*/
+
+>>>>>>> 63d9106efa5d77802ff5a6b95f292c7e89e0d502
