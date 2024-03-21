@@ -1,9 +1,38 @@
-const apiKey = '8a9ec15361cbfa604cbdb667ea99a47c';
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
+const weatherApiKey = '8a9ec15361cbfa604cbdb667ea99a47c';
+const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
+// const newsApiKey = 'pub_404933325ec8086ad3793fbdae8196582701a';
+const newsApiUrl = 'https://newsdata.io/api/1/news?apikey=pub_404933325ec8086ad3793fbdae8196582701a&q=';
 
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 const weatherIcon = document.querySelector('.weather-icon');
+const newsImage = document.querySelector('.news-image');
+
+async function checkNews(topic) {
+    const response = await fetch(newsApiUrl + topic + '&language=en');
+
+    if(response.status == 404) {
+      document.querySelector('.news-error').style.display = 'block';
+      document.querySelector('.news').style.display = 'none';
+    } else {
+      var data = await response.json();
+      var results = data.results;
+      var select = Math.floor(Math.random() * 10)
+      var article = results[select];
+
+      console.log(article);
+
+      document.querySelector('.news-title').innerHTML = article.title;
+      document.querySelector('.news-source').innerHTML = article.source_url;
+      if(article.image_url != null) {
+        newsImage.src = article.image_url;
+      }
+      document.querySelector('.news-description').innerHTML = article.description;
+      document.querySelector('.news-link').href = article.link;
+
+      document.querySelector('.news').style.display = 'block';
+    }
+}
 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -45,7 +74,13 @@ else {
 
 searchBtn.addEventListener('click', ()=> {
     checkWeather(searchBox.value);
-})
+});
+
+newsSearchBtn.addEventListener('click', (event)=> {
+    event.preventDefault();
+    checkNews(newsSearchBox.value);
+});
+
 // create variables
 //const toggleBtn = document.querySelector('#toggleBtn');
 //const divList = document.querySelector('.listHolder');
