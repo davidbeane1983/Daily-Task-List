@@ -1,3 +1,11 @@
+.news-link {
+    font-size: 20px;
+}
+
+.news p {
+    font-size: 20px;
+}
+
 .flex-container{
     display: flex;
     border: black;
@@ -78,7 +86,7 @@
 }
 
 .news-image {
-    display: none;
+    width: 400px;
 }
 
 .weather-icon{
