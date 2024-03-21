@@ -28,29 +28,14 @@
     text-align: center;
 }
 
-.news-card {
-    width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #d94436, #75b8bf);
-    color: #fff;
-    margin: 50px auto 0;
-    border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
-}
-
-.news {
-    display: none;
-}
-
-.search, .news-search{
+.search{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search input, .news-search input{
+.search input{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -63,7 +48,7 @@
     font-size: 18px;
 }
 
-.search button, .news-search button{
+.search button{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -73,12 +58,8 @@
     cursor: pointer;
 }
 
-.search button img, .news-search button img{
+.search button img{
     width: 16px;
-}
-
-.news-image {
-    display: none;
 }
 
 .weather-icon{
@@ -125,7 +106,7 @@
     display: none;
 }
 
-.error, .news-error{
+.error{
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
