@@ -3,11 +3,8 @@ const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imp
 // const newsApiKey = 'pub_404933325ec8086ad3793fbdae8196582701a';
 const newsApiUrl = 'https://newsdata.io/api/1/news?apikey=pub_404933325ec8086ad3793fbdae8196582701a&q=';
 
-
 const searchBox = document.querySelector('.search input');
-const newsSearchBox = document.querySelector('.news-search input');
 const searchBtn = document.querySelector('.search button');
-const newsSearchBtn = document.querySelector('.news-search button');
 const weatherIcon = document.querySelector('.weather-icon');
 const newsImage = document.querySelector('.news-image');
 
@@ -38,7 +35,7 @@ async function checkNews(topic) {
 }
 
 async function checkWeather(city) {
-    const response = await fetch(weatherApiUrl + city + `&appid=${weatherApiKey}`);
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
 if(response.status == 404){
     document.querySelector('.error').style.display = 'block';
