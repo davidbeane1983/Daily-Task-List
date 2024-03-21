@@ -36,14 +36,29 @@
     text-align: center;
 }
 
-.search{
+.news-card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #d94436, #75b8bf);
+    color: #fff;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.news {
+    display: none;
+}
+
+.search, .news-search{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search input{
+.search input, .news-search input{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -56,7 +71,7 @@
     font-size: 18px;
 }
 
-.search button{
+.search button, .news-search button{
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -66,17 +81,14 @@
     cursor: pointer;
 }
 
-.search button img{
+.search button img, .news-search button img{
     width: 16px;
 }
 
-<<<<<<< HEAD
 .news-image {
     width: 400px;
 }
 
-=======
->>>>>>> 325eac5329554e04e81062830bf0d84d6d43da29
 .weather-icon{
     width: 170px;
     margin-top: 30px;
@@ -121,7 +133,7 @@
     display: none;
 }
 
-.error{
+.error, .news-error{
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
