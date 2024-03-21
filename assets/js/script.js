@@ -1,24 +1,12 @@
-const weatherApiKey = '8a9ec15361cbfa604cbdb667ea99a47c';
-const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
-const newsApiKey = '39df1d4780764208b4020659a39ba813';
-const newsApiUrl = 'https://newsapi.org/v2/top-headlines?q=';
-
+const apiKey = '8a9ec15361cbfa604cbdb667ea99a47c';
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
 
 const searchBox = document.querySelector('.search input');
-const newsSearchBox = document.querySelector('.news-search input');
 const searchBtn = document.querySelector('.search button');
-const newsSearchBtn = document.querySelector('.news-search button');
 const weatherIcon = document.querySelector('.weather-icon');
-const newsImage = document.querySelector('.news-image');
-
-async function checkNews(topic) {
-    const response = await fetch(newsApiUrl + topic + `&apiKey=${newsApiKey}`);
-
-    
-}
 
 async function checkWeather(city) {
-    const response = await fetch(weatherApiUrl + city + `&appid=${weatherApiKey}`);
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
 if(response.status == 404){
     document.querySelector('.error').style.display = 'block';
@@ -57,12 +45,7 @@ else {
 
 searchBtn.addEventListener('click', ()=> {
     checkWeather(searchBox.value);
-});
-
-newsSearchBtn.addEventListener('click', ()=> {
-    checkNews(newsSearchBox.value);
-});
-
+})
 // create variables
 //const toggleBtn = document.querySelector('#toggleBtn');
 //const divList = document.querySelector('.listHolder');
