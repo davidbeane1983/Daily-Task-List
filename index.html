@@ -44,7 +44,7 @@
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-primary">
-              <strong>Sign up</strong>
+              <p>Sign up</p>
             </a>
             <a class="button is-light">
                   Log in
@@ -56,6 +56,7 @@
       </nav>
    <div class="three-columns">
     <div class="card">
+        <div class="weather-title">Weather</div>
         <div class="search">
             <input type="text" placeholder="enter city name" spellcheck="false">
             <button><img src="assets\images\images\search.png"></button>
@@ -89,25 +90,24 @@
     
     <!--This div is for the task list-->
     <div>
-        
-        <h1 class="center">To Do List</h1> 
+        <h1 class="center">To Do List</h1>
         <form id="myForm">
             <label for="inputField"><h3 >Enter a task to add to the list:</h3>
             </label>
             <input class="floatLeft" type="text" id="addBtn" name="inputField">
-        <p id="Todo"> 
-            <button  id="todo-entry-box" class="floatRight">Submit</button>
-        </p> 
+        <p id="Todo">
+            <button type="submit"  id="todo-entry-box" class="floatRight">Submit</button>
+        </p>
         <br>
         <br>
         <!--This is where the task list will populate-->
         <ol id="todo-list">
             <!-- List items will be added dynamically using JavaScript -->
         </ol>
-    
     </div>
 
     <div class="news-card">
+        <div class="news-title">News</div>
         <div class="news-search">
             <input type="text" placeholder="enter topic" spellcheck="false">
             <button><img src="assets\images\images\search.png"></button>
