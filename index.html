@@ -34,21 +34,14 @@
               <a class="navbar-item">
               Home
             </a>
-            <a class="navbar-item">
-              Blank Tab
-            </a>
+    
           </style>
         </div>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <p>Sign up</p>
-            </a>
-            <a class="button is-light">
-                  Log in
-                </a>
+         
               </div>
             </div>
           </div>
@@ -56,7 +49,7 @@
       </nav>
    <div class="three-columns">
     <div class="card">
-        <div class="weather-title">Weather</div>
+        <h2 class="title is-2 has-text-white">Weather</h2>
         <div class="search">
             <input type="text" placeholder="enter city name" spellcheck="false">
             <button><img src="assets\images\images\search.png"></button>
@@ -89,25 +82,27 @@
     
     
     <!--This div is for the task list-->
-    <div>
-        <h1 class="center">To Do List</h1>
+    <div class="list-card">
+        <h2 class="title is-2 has-text-white">My Daily To-Do List</h2>
         <form id="myForm">
-            <label for="inputField"><h3 >Enter a task to add to the list:</h3>
+            <label for="inputField"><h5 class="title is-5 has-text-white mb-3 is-pulled-left">Enter a task to add to the list:</h5>
             </label>
-            <input class="floatLeft" type="text" id="addBtn" name="inputField">
+            <input class="input is-primary is-rounded" type="text" id="addBtn" name="inputField">
         <p id="Todo">
-            <button type="submit"  id="todo-entry-box" class="floatRight">Submit</button>
+            <button type="submit"  id="todo-entry-box" class="button is-primary is-rounded mt-3 is-pulled-right">Submit</button>
         </p>
         <br>
         <br>
         <!--This is where the task list will populate-->
+       <ul class="menu-list is-rounded">
         <ol id="todo-list">
             <!-- List items will be added dynamically using JavaScript -->
         </ol>
+      </ul>
     </div>
 
     <div class="news-card">
-        <div class="news-title">News</div>
+        <h2 class="title is-2 has-text-white">News</h2>
         <div class="news-search">
             <input type="text" placeholder="enter topic" spellcheck="false">
             <button><img src="assets\images\images\search.png"></button>

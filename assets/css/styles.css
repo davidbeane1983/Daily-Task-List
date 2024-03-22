@@ -176,7 +176,7 @@
   }
 
 .button.is-primary:hover {
-    background-color: #243E73;
+    background-color: #011140;
     color: white;
   }
 
@@ -201,14 +201,32 @@
     float: left;
   }
   .btn-primary{
-    background-color: blueviolet;
+    background-color: #243E73;
     color:white;
     padding-left: 1%;
     margin-left: 5%;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
   }
+  
   li{
     width:100%;
     display: flex;
     justify-content: space-between;
   }
 
+  .list-card {
+    width: 90%;
+    max-width: 470px;
+    background-color: #243E73;
+    color: #fff;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.todo-list {
+  background-color: #75B8BF;
+}
