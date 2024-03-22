@@ -265,3 +265,11 @@
   .input.is-size-4 {
     background-color: #ebfffc;
   }
+
+  #date {
+    display: flex;
+    color: #243E73;
+    padding-left: 10px;
+  }
+  
+ 

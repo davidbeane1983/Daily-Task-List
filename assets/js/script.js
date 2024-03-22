@@ -100,6 +100,39 @@ newsSearchBtn.addEventListener('click', (event)=> {
     checkNews(newsSearchBox.value);
 });
 
+// Function to get the current date in the desired format
+function getCurrentDate() {
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  const currentDate = new Date();
+  const dayOfWeek = daysOfWeek[currentDate.getDay()];
+  const month = months[currentDate.getMonth()];
+  const date = currentDate.getDate();
+  const year = currentDate.getFullYear();
+
+  return `${dayOfWeek}, ${month} ${date}, ${year}`;
+}
+
+// Update the date element with the current date
+function updateDate() {
+  document.getElementById('date').innerHTML = getCurrentDate();
+}
+
+// Update the date initially
+updateDate();
+
+// Update the date every 24 hours
+setInterval(updateDate, 24 * 60 * 60 * 1000);
+
+
+// Update the date element with the current date
+document.getElementById('date').innerHTML = getCurrentDate();
+
+
+// Update the date element with the current date
+document.getElementById('date').innerHTML = getCurrentDate();
+
 // get the elements needed for managing the todo list
 var inputValue = document.getElementsByClassName("remove");
 var addInput = document.querySelector("#addBtn");
