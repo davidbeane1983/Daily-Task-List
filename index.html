@@ -34,21 +34,13 @@
               <a class="navbar-item">
               Home
             </a>
-            <a class="navbar-item">
-              Blank Tab
-            </a>
+           
           </style>
         </div>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-                  Log in
-                </a>
+        
               </div>
             </div>
           </div>
@@ -88,24 +80,28 @@
     
     
     <!--This div is for the task list-->
-    <div>
+    <div class="list-card">
         
-        <h1 class="center">To Do List</h1> 
+        <h2 class="title is-2 is-light has-text-white">My Daily To-Do List</h2> 
         <form id="myForm">
-            <label for="inputField"><h3 >Enter a task to add to the list:</h3>
+            <label for="inputField"><h5 class="title is-5 has-text-white is-pulled-left is-rounded mb-3">Enter a task to add to the list:</h5>
             </label>
-            <input class="floatLeft" type="text" id="addBtn" name="inputField">
+            <input class="floatLeft input is-large" type="text" id="addBtn" name="inputField">
         <p id="Todo"> 
-            <button  id="todo-entry-box" class="floatRight">Submit</button>
+          <!-- <a class="button is-primary"> -->
+            
+       <button  id="todo-entry-box" class="button is-primary is-pulled-right mt-3">Submit</button>   
         </p> 
         <br>
         <br>
         <!--This is where the task list will populate-->
         <ol id="todo-list">
+      
             <!-- List items will be added dynamically using JavaScript -->
         </ol>
     
     </div>
+   
 
     <div class="news-card">
         <div class="news-search">
@@ -124,6 +120,7 @@
         </div>
     </div>
 </div>
+
 
 <script src="assets\js\script.js"></script>
 </body>

@@ -158,11 +158,13 @@
     color: white;
   }
 
+.todo-entry-box,
 .button.is-primary {
     background-color: #75B8BF;
     color: white;
   }
 
+  .todo-entry-box,
 .button.is-primary:hover {
     background-color: #243E73;
     color: white;
@@ -189,7 +191,7 @@
     float: left;
   }
   .btn-primary{
-    background-color: blueviolet;
+    background-color: #75B8BF;
     color:white;
     padding-left: 1%;
     margin-left: 5%;
@@ -200,3 +202,19 @@
     justify-content: space-between;
   }
 
+  .myForm {
+    background-color: #243E73;
+  }
+
+  .list-card {
+    background-color: #243E73;
+    width: 90%;
+    max-width: 470px; 
+    color: #fff;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    padding: 40px 35px;
+    text-align: center;
+  }
+
+  
