@@ -1,3 +1,4 @@
+/* news column styling */
 .news-link {
     font-size: 20px;
 }
@@ -12,22 +13,11 @@
     border-style: solid;
     align-items: center;
 }
-/* .three-columns {
-    display:flex;
-} */
 
-/* columns */
-/* .three-columns > * {
-    width:calc(100% / 3);
-    padding:1rem;
-} */
-
+/* weather column */
 .card{
-    /* width: 100%;
-    max-width: 470px; */
     background: linear-gradient(135deg, #75b8bf, #243E73);
     color: #fff;
-    /* margin: 20px auto 0; */
     border-radius: 10px;
     padding:  35px;
     text-align: center;
@@ -39,12 +29,10 @@
     font-size: 30px;
 }
 
+/* news */
 .news-card {
-    /* width: 90%; */
-    /* max-width: 470px; */
     background: linear-gradient(135deg, #243E73, #75b8bf);
     color: #fff;
-  
     border-radius: 10px;
     padding: 35px;
     text-align: center;
@@ -201,17 +189,12 @@
   .center {
     text-align: center;
   }
-  .floatRight {
-    float: right;
-  }
-  .floatLeft {
-    float: left;
-  }
+
+    /* to do list stuff */
   .btn-primary {
     background-color: #75B8BF;
     border-radius: 20px;
     cursor: pointer;
-
   }
 
   .btn-primary:hover {
@@ -228,11 +211,8 @@
   }
 
   .list-card {
-    /* width: 90%;
-    max-width: 470px; */
     background-color: #243E73;
     color: #fff;
-
     border-radius: 10px;
     padding: 40px 35px;
     text-align: center;
@@ -264,26 +244,24 @@
     font-size: 1.25rem;
     padding-top: 15px;
     font-weight: bold;
-   
   }
 
   #todo-list li {
     font-size: 1.25rem;
     padding: 10px;
     border-radius: 30px;
- 
   }
-
-
 
   #todo-list li:nth-child(even) {
     background-color: #011140;
     margin-top: 10px;
-   
   }
 
   #todo-list li:nth-child(odd) {
     background-color: #75B8BF;
     margin-top: 10px;
-  
+  }
+
+  .input.is-size-4 {
+    background-color: #ebfffc;
   }
