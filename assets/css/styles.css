@@ -8,9 +8,7 @@
 
 .flex-container{
     display: flex;
-    border: black;
     justify-content: center;
-    border-color: black;
     border-style: solid;
     align-items: center;
 }
@@ -22,16 +20,15 @@
 .three-columns > * {
     width:calc(100% / 3);
     padding:1rem;
-    border:1px solid black;
 }
 
 .card{
-    width: 90%;
+    width: 100%;
     max-width: 470px;
-    background: linear-gradient(135deg, #75b8bf, #d94436);
+    background: linear-gradient(135deg, #75b8bf, #243E73);
     color: #fff;
-    margin: 50px auto 0;
-    border-radius: 20px;
+    margin: 20px auto 0;
+    border-radius: 10px;
     padding: 40px 35px;
     text-align: center;
 }
@@ -39,10 +36,10 @@
 .news-card {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #d94436, #75b8bf);
+    background: linear-gradient(135deg, #243E73, #75b8bf);
     color: #fff;
-    margin: 50px auto 0;
-    border-radius: 20px;
+    margin: 20px auto 0;
+    border-radius: 10px;
     padding: 40px 35px;
     text-align: center;
 }
@@ -140,3 +137,66 @@
     margin-top: 10px;
     display: none;
 }
+
+.navbar-item {
+    color: white;
+  }
+
+  .navbar, 
+  .navbar-brand {
+    background-color: #011140;
+    color: white;
+  }
+
+.button.is-light { 
+    background-color: #75B8BF;
+    color: white;
+  }
+
+.button.is-light:hover { 
+    background-color: #243E73;
+    color: white;
+  }
+
+.button.is-primary {
+    background-color: #75B8BF;
+    color: white;
+  }
+
+.button.is-primary:hover {
+    background-color: #243E73;
+    color: white;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    border-color: black;
+    border-style: solid;
+    align-items: center;
+  }
+  .three-columns {
+    display: flex;
+  }
+
+  .center {
+    text-align: center;
+  }
+  .floatRight {
+    float: right;
+  }
+  .floatLeft {
+    float: left;
+  }
+  .btn-primary{
+    background-color: blueviolet;
+    color:white;
+    padding-left: 1%;
+    margin-left: 5%;
+  }
+  li{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
