@@ -11,19 +11,25 @@ const weatherIcon = document.querySelector('.weather-icon');
 const newsImage = document.querySelector('.news-image');
 
 async function checkNews(topic) {
+  // fetch news data from the API using the provided topic
     const response = await fetch(newsApiUrl + topic + '&language=en');
 
+    // if the response status is 404 (not found), display an error message
     if(response.status == 404) {
       document.querySelector('.news-error').style.display = 'block';
       document.querySelector('.news').style.display = 'none';
     } else {
+      // parse the response data as JSON
       var data = await response.json();
+      // get the list of news articles from the response
       var results = data.results;
+      // select a random article from the list
       var select = Math.floor(Math.random() * 10)
       var article = results[select];
 
       console.log(article);
 
+      // display the selected article's title, source, image, description, and link
       document.querySelector('.news-title').innerHTML = article.title;
       document.querySelector('.news-source').innerHTML = article.source_url;
       if(article.image_url != null) {
@@ -32,26 +38,32 @@ async function checkNews(topic) {
       document.querySelector('.news-description').innerHTML = article.description;
       document.querySelector('.news-link').href = article.link;
 
+      // display the news section
       document.querySelector('.news').style.display = 'block';
     }
 }
 
 async function checkWeather(city) {
+  // fetch the weather data from the API using the provided city
     const response = await fetch(weatherApiUrl + city + `&appid=${weatherApiKey}`);
 
+// if the response status is 404 (not found), display an error message
 if(response.status == 404){
     document.querySelector('.error').style.display = 'block';
     document.querySelector('.weather').style.display = 'none';
 }
 else {
+  // parse the response data as JSON
     var data = await response.json();
 
+    // display the city name, temp, humidity, and wind speed
     document.querySelector('.city').innerHTML = data.name;
     document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°F';
     document.querySelector('.humidity').innerHTML = data.main.humidity + '%';
     document.querySelector('.wind').innerHTML = data.wind.speed + 'mp/h';
     
 
+    // set the weather icon based on the weather condition
     if(data.weather[0].main == 'Clouds') {
         weatherIcon.src = 'assets/images/images/clouds.png';
     }
@@ -68,26 +80,34 @@ else {
         weatherIcon.src = 'assets/images/images/mist.png';
     }
 
+    // display the weather section
     document.querySelector('.weather').style.display = 'block';
 }
 
     
 }
 
+// event listener for the weather search button
 searchBtn.addEventListener('click', ()=> {
     checkWeather(searchBox.value);
 });
 
+// event listener for the news search button
 newsSearchBtn.addEventListener('click', (event)=> {
+  // prevent the default form submission behavior
     event.preventDefault();
+    // call the checkNews function with the value from the news search box
     checkNews(newsSearchBox.value);
 });
 
+// get the elements needed for managing the todo list
 var inputValue = document.getElementsByClassName("remove");
 var addInput = document.querySelector("#addBtn");
 var addBtn = document.querySelector("#myForm");
+// retrieve the todoArray from localStorage or initialize it as empty
 var todoArray = JSON.parse(localStorage.getItem("todoArray"))||[];
 var items = todoArray;
+// declare item variable
 var item 
  
  
@@ -101,9 +121,11 @@ var item
     //const to = JSON.parse(todoArray);
   });
  
- 
+//  function to add items to the todo list
 function addLists(event) {
+  // prevent the default form submission behavior
   event.preventDefault();
+  // check if the input value is empty
   if (addInput.value === "") {
     console.log("empty");
   } else {
@@ -122,11 +144,19 @@ function addLists(event) {
   }
 }
  
+// function to create and display the list items
 function createLi(){
+  
+  // get the <ol> element by id
   var ol = document.getElementById("todo-list");
-  //createBtn(li);
+  
+  //clear the existing content of the <ol> element
   ol.innerHTML=""
+  
+  // retrieve the todoArray from localStorage or initialize it as an empty array
   var todoArray = JSON.parse(localStorage.getItem("todoArray"))||[];
+
+  // loop through the todoArray and create a new <li> element for each item
   for(let i=0;i<todoArray.length;i++){
     var li = document.createElement("li");
     var spanTag = document.createElement("span");
