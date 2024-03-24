@@ -25,6 +25,7 @@
         <div class="navbar-brand">
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Home</a>
          </div>
       </div>
       <div class="navbar-end">
@@ -34,8 +35,8 @@
         </div>
       </nav>
 
-      <!-- modal -- the week/month/day/year -->
-      <div id="date" class="is-size-1 has-text-centered"></div>
+      <!--the week/month/day/year -->
+      <div id="date" class="title is-size-2 has-text-centered mt-3"></div>
 
       <!-- columns -->
 <div class="columns">
@@ -44,7 +45,8 @@
         <div class="card">
             <h2 class="title is-2 has-text-white">Weather</h2>
             <div class="search">
-                <input type="text" placeholder="enter city name" spellcheck="false">
+              
+                <input class="input is-size-4" type="text" placeholder="enter city name" spellcheck="false">
                 <button><img src="assets\images\images\search.png"></button>
             </div>
             <div class="error">
@@ -89,9 +91,20 @@
                 <br>
 
                 <!--This is where the task list will populate-->
-                  <ol id="todo-list" type="1" class="is-medium">
-                      <!-- List items will be added dynamically using JavaScript -->
-                  </ol>
+                <ol id="todo-list" type="1" class="is-medium">
+                  <!-- List items will be added dynamically using JavaScript -->
+              </ol>
+              
+              <button id="clear-modal-popup-btn" class="button is-rounded is-primary mt-3">Clear list</button>
+              <div id="modal-container" class="modal-container">
+                  <div class="modal">
+                      <h5 class="title is-5 mt-3 p-3">Are you sure you want to clear the list?</h5>
+                      <button id="confirm-clear" class="button is-rounded is-primary mt-3">Yes</button>
+                      <button id="cancel-clear" class="button is-rounded is-primary mt-3">No</button>
+                  </div>
+              </div>
+              
+                  
             </form>
         </div>
     </div>
@@ -101,7 +114,7 @@
         <div class="news-card">
             <h2 class="title is-2 has-text-white">News</h2>
             <div class="news-search">
-                <input type="text" placeholder="enter topic" spellcheck="false">
+                <input class="input is-size-4" type="text" placeholder="enter topic" spellcheck="false">
                 <button><img src="assets\images\images\search.png"></button>
             </div>
             <div class="news-error">
