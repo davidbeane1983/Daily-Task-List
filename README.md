@@ -97,6 +97,6 @@ Our group built a page that meets all of the project requirements where the the 
 - is responsive with a polished UI
 - has a clean repository
 
-Please follow this link to our fully deployed project on GitHub, and enjoy looking through our teamwork:
+Please follow this link to our fully deployed project on GitHub, and enjoy looking through the work our collective team effort produced:
 
 https://davidbeane1983.github.io/Project1/
