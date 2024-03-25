@@ -1,4 +1,4 @@
-# **Interactive Front-End Project: Daily Task List with Interactive Weather & News Updates**
+# **Interactive Front-End Project: Daily Task List with Weather & News Updates**
 
 # Purpose:
 The purpose of this project was to work in a group setting, and take everything we've learned in class over the past six weeks to create a real-world front-end application for our portfolios.
@@ -7,12 +7,13 @@ The purpose of this project was to work in a group setting, and take everything 
 Here is a link to our project proposal: https://docs.google.com/document/d/1Nmnr4t2qOZ9Cw_5P_Igc0qXeRajCBWISYu6bSHtewF8/edit
 
 # Description: 
-Our purpose of this project was to create a wepage that uses interactive daily tasks in conjunction with the weather and news updates accordingly.
+Our purpose of this project was to create a webpage that uses interactive daily tasks in conjunction with the weather and news updates accordingly.
 
 # Our user story: 
 As a user,
-I want to see the upcoming weather in regards to news updates, and so
-that I can create a personalized, informational and relevant task list for the day.
+I want to see the upcoming weather and current news 
+so that I can create a personalized, relevant and informational task list for the day
+
 
 We began by doing research and finding sources -- these videos were equally helpful in various parts of the assignment.
 
