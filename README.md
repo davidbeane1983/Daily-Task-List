@@ -85,7 +85,7 @@ One cool feature we included was the day of the week, month, date, and year that
 # Group Successes:
 - the aforementioned collaboration and communication. Everyone always knew where the rest of the team was at and what was in-process
 - the group's ability to problem-solve as a whole as well as maintaining positivity throughout the project while resolving conflicts (primarily -- merge conflicts)
-- ultimately, we are very proud of the product we developed and how we used our different skills and interests to work together
+- ultimately, we are very proud of the product we developed and how we used our different skills and interests to work together in a successfully efficient and collaborative environment
 
 # In conclusion:
 Our group built a page that meets all of the project requirements where the the page:
