@@ -61,6 +61,10 @@ Additionally, our page uses Bulma styling for responsiveness and friendly user i
 
 ![mobile-responsiveness](./assets/images/images/mobile-2.png)
 
+One cool feature we included was the day of the week, month, date, and year that updates daily accordingly and really ties our project together:
+
+![date](./assets/images/images/date-change.png)
+
 # In the future, we'd like to add things like:
 - add a checklist feature in addition to be able to remove items (ie -- mark as complete)
 - be able to rearrange list items
