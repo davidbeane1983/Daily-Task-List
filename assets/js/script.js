@@ -2,7 +2,7 @@
 const weatherApiKey = '8a9ec15361cbfa604cbdb667ea99a47c';
 const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
 // const newsApiKey = 'pub_404933325ec8086ad3793fbdae8196582701a';
-const newsApiUrl = 'https://newsdata.io/api/1/news?apikey=pub_404933325ec8086ad3793fbdae8196582701a&q=';
+const newsApiUrl = 'https://newsdata.io/api/1/news?apikey=pub_404933325ec8086ad3793fbdae8196582701a&qInTitle=';
 
 // DOM elements
 const searchBox = document.querySelector('.search input');
