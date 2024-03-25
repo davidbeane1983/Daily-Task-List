@@ -75,14 +75,14 @@ One cool feature we included was the day of the week, month, date, and year that
 - allows users to bookmark or save news links within the app
 - include a night mode on the weather icons
 
-# Our group worked really well together and collaborated, communicated extraordinarily well and based on project needs, but there were some challenges such as:
+# Group Challenges:
 - working with GitHub in a collaborative environment
     - coordinating to ensure everyone is working in the same stage of production
         - doing frequent commits and pulls
         - resolving merge conflicts!!! (this was a big one)
 - integrating bulma to parts of the project it was not used previously
 
-# Our successes included:
+# Group successes:
 - the aforementioned collaboration and communication. Everyone always knew where the rest of the team was at and what was in-process
 - the group's ability to problem-solve as a whole as well as maintaining positivity throughout the project while resolving conflicts (primarily -- merge conflicts)
 - ultimately, we are very proud of the product we developed and how we used our different skills and interests to work together
