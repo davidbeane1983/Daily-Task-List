@@ -1,135 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="assets\css\styles.css" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" type="text/css" href="assets\css\styles.css" />
+    </head>
 
-<body>
-  <!-- header -->
-    <section class="hero is-small is-link" style="background-color: #243E73">
-        <div class="hero-body">
-          <p class="title">
-            My Personalized, Snazzy Weather Scheduler.
-          </p>
-          <p class="subtitle">
-            For all my daily scheduling needs.
-          </p>
-        </div>
-      </section> 
-     <!-- navigation -->
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">Home</a>
-         </div>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
+    <body>
+        <!-- header -->
+        <section class="hero is-small is-link" style="background-color: #243E73">
+            <div class="hero-body">
+                <p class="title">My Personalized, Snazzy Weather Scheduler.</p>
+                <p class="subtitle">For all my daily scheduling needs.</p>
             </div>
-          </div>
-        </div>
-      </nav>
+        </section>
 
-      <!--the week/month/day/year -->
-      <div id="date" class="title is-size-2 has-text-centered mt-3"></div>
+        <!--the day/month/year -->
+        <div id="date" class="title is-size-2 has-text-centered mt-3"></div>
 
-      <!-- columns -->
-<div class="columns">
-    <div class="column is-one-third mt-4">
-      <!-- weather api -->
-        <div class="card">
-            <h2 class="title is-2 has-text-white">Weather</h2>
-            <div class="search">
-              
-                <input class="input is-size-4" type="text" placeholder="enter city name" spellcheck="false">
-                <button><img src="assets\images\images\search.png"></button>
-            </div>
-            <div class="error">
-                <p>Invalid City Name</p>
-            </div>
-            <div class="weather">
-                <img src="assets\images\images\rain.png" class="weather-icon">
-                <h1 class="temp">32°F</h1>
-                <h2 class="city">Newark</h2>
-                <div class="details">
-                    <div class="col">
-                        <img src="assets\images\images\humidity.png">
-                        <div>
-                            <p class="humidity">50%</p>
-                            <p>Humidity</p>
-                        </div>
+        <!-- columns -->
+        <div class="columns">
+            <div class="column is-one-third mt-4">
+            <!-- weather api -->
+                <div class="card">
+                    <h2 class="title is-2 has-text-white">Weather</h2>
+                    <div class="search">
+                        <input class="input is-size-4" type="text" placeholder="enter city name" spellcheck="false">
+                        <button><img src="assets\images\images\search.png"></button>
                     </div>
-                    <div class="col">
-                        <img src="assets\images\images\wind.png">
-                        <div>
-                            <p class="wind">20 mph</p>
-                            <p>Wind Speed</p>
+                    <div class="error">
+                        <p>Invalid City Name</p>
+                    </div>
+                    <div class="weather">
+                        <img src="assets\images\images\rain.png" class="weather-icon">
+                        <h1 class="temp">32°F</h1>
+                        <h2 class="city">Newark</h2>
+                        <div class="details">
+                            <div class="col">
+                                <img src="assets\images\images\humidity.png">
+                                <div>
+                                    <p class="humidity">50%</p>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <img src="assets\images\images\wind.png">
+                                <div>
+                                    <p class="wind">20 mph</p>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- daily task list -->
-    <div class="column is-one-third">
-        <div class="list-card mt-4">
-            <h2 class="title is-2 has-text-white">My Daily To-Do List</h2>
-            <form id="myForm">
-                <label for="inputField"><h5 class="title is-5 has-text-white mb-3 is-pulled-left">Enter a task to add to the list:</h5>
-                </label>
-                <input class="input is-size-4 is-rounded" type="text" placeholder="tasks" id="addBtn" name="inputField">
-                <p id="Todo">
-                    <button type="submit"  id="todo-entry-box" class="button is-primary is-rounded mt-3 is-pulled-right">Submit</button>
-                </p>
-                <br>
-                <br>
-
-                <!--This is where the task list will populate-->
-                <ol id="todo-list" type="1" class="is-medium">
-                  <!-- List items will be added dynamically using JavaScript -->
-              </ol>
-              
-              <button id="clear-modal-popup-btn" class="button is-rounded is-primary mt-3">Clear list</button>
-              <div id="modal-container" class="modal-container">
-                  <div class="modal">
-                      <h5 class="title is-5 mt-3 p-3">Are you sure you want to clear the list?</h5>
-                      <button id="confirm-clear" class="button is-rounded is-primary mt-3">Yes</button>
-                      <button id="cancel-clear" class="button is-rounded is-primary mt-3">No</button>
-                  </div>
-              </div>
-              
-                  
-            </form>
-        </div>
-    </div>
-
-    <!-- news api -->
-    <div class="column is-one-third mt-4">
-        <div class="news-card">
-            <h2 class="title is-2 has-text-white">News</h2>
-            <div class="news-search">
-                <input class="input is-size-4" type="text" placeholder="enter topic" spellcheck="false">
-                <button><img src="assets\images\images\search.png"></button>
+            <!-- daily task list -->
+            <div class="column is-one-third">
+                <div class="list-card mt-4">
+                    <h2 class="title is-2 has-text-white">My Daily To-Do List</h2>
+                    <form id="myForm">
+                        <label for="inputField">
+                            <h5 class="title is-5 has-text-white mb-3 is-pulled-left">Enter a task to add to the list:</h5>
+                        </label>
+                        <input class="input is-size-4 is-rounded" type="text" placeholder="tasks" id="addBtn" name="inputField">
+                        <p id="Todo">
+                            <button type="submit"  id="todo-entry-box" class="button is-primary is-rounded mt-3 is-pulled-right">Submit</button>
+                        </p>
+                        <br>
+                        <br>
+                        <!--This is where the task list will populate-->
+                        <ol id="todo-list" type="1" class="is-medium">
+                        <!-- List items will be added dynamically using JavaScript -->
+                        </ol>
+                        <button id="clear-modal-popup-btn" class="button is-rounded is-primary mt-3">Clear list</button>
+                        <div id="modal-container" class="modal-container">
+                            <div class="modal">
+                                <h5 class="title is-5 mt-3 p-3">Are you sure you want to clear the list?</h5>
+                                <button id="confirm-clear" class="button is-rounded is-primary mt-3">Yes</button>
+                                <button id="cancel-clear" class="button is-rounded is-primary mt-3">No</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="news-error">
-                <p>No results</p>
-            </div>
-            <div class="news">
-                <h1 class="news-title">Title</h1>
-                <h2 class="news-source">source</h2>
-                <img src="" class="news-image">
-                <p class="news-description">description</p>
-                <a class="news-link" href="">Click here for full article</a>
+
+            <!-- news api -->
+            <div class="column is-one-third mt-4">
+                <div class="news-card">
+                    <h2 class="title is-2 has-text-white">News</h2>
+                    <div class="news-search">
+                        <input class="input is-size-4" type="text" placeholder="enter topic" spellcheck="false">
+                        <button><img src="assets\images\images\search.png"></button>
+                    </div>
+                    <div class="news-error">
+                        <p>No results</p>
+                    </div>
+                    <div class="news">
+                        <h1 class="news-title">Title</h1>
+                        <h2 class="news-source">source</h2>
+                        <img src="" class="news-image">
+                        <p class="news-description">description</p>
+                        <a class="news-link" href="">Click here for full article</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<script src="assets\js\script.js"></script>
-</body>
+    <script src="assets\js\script.js"></script>
+    </body>
 </html>

@@ -18,7 +18,6 @@ let modalContainer;
 document.addEventListener("DOMContentLoaded", function () {
   // modal setup
   const clearButton = document.getElementById('clear-modal-popup-btn');
-  // Remove the "let" keyword here
   modalContainer = document.getElementById('modal-container'); 
   // Hide the modal by default
   modalContainer.style.display = 'none';
@@ -50,15 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.removeItem("todoArray");
         document.getElementById("todo-list").innerHTML = "";
         modalContainer.style.display = 'none';
-      });
-    }
-  });
+    });
+  }
+});
 
-  // function to fetch and display news
-  async function checkNews(topic) {
-  // fetch news data from the API using the provided topic
-  const response = await fetch(newsApiUrl + topic + '&language=en');
-
+// function to fetch and display news
+async function checkNews(topic) {
+// fetch news data from the API using the provided topic
+const response = await fetch(newsApiUrl + topic + '&language=en');
   // if the response status is 404 (not found), display an error message
   if (response.status == 404) {
     document.querySelector('.news-error').style.display = 'block';
@@ -71,8 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // select a random article from the list
     var select = Math.floor(Math.random() * 10)
     var article = results[select];
-
-    console.log(article);
 
     // display the selected article's title, source, image, description, and link
     document.querySelector('.news-title').innerHTML = article.title;
@@ -166,12 +162,8 @@ setInterval(updateDate, 24 * 60 * 60 * 1000);
 // Update the date element with the current date
 document.getElementById('date').innerHTML = getCurrentDate();
 
-
 // Update the date element with the current date
 document.getElementById('date').innerHTML = getCurrentDate();
-
-// get the elements needed for managing the todo list
-
 
 // Update the date initially
 updateDate();
@@ -179,10 +171,8 @@ updateDate();
 // Update the date every 24 hours
 setInterval(updateDate, 24 * 60 * 60 * 1000);
 
-
 // Update the date element with the current date
 document.getElementById('date').innerHTML = getCurrentDate();
-
 
 // Update the date element with the current date
 document.getElementById('date').innerHTML = getCurrentDate();
@@ -194,19 +184,6 @@ var addBtn = document.querySelector("#myForm");
 // retrieve the todoArray from localStorage or initialize it as empty
 var todoArray = JSON.parse(localStorage.getItem("todoArray"))||[];
 var items = todoArray;
-// declare item variable
-var item 
- 
- 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Retrieve the item with the key 'myKey' from local storage
- 
-    // JSON string to be parsed
-    const jsonString = todoArray;
- 
-    // Parse the JSON string into a JavaScript object
-    //const to = JSON.parse(todoArray);
-  });
  
 //  function to add items to the todo list
 function addLists(event) {
@@ -218,16 +195,14 @@ function addLists(event) {
   } else {
     console.log(addInput.value);
  
- 
     // Save the string to localStorage
     var todoArray = JSON.parse(localStorage.getItem("todoArray"))||[];
     todoArray.push({text:addInput.value,id:Math.floor(Math.random()*999)});
     var string = JSON.stringify(todoArray);
- 
     localStorage.setItem("todoArray", string);
     createLi()
     console.log("string",string);
-    addInput.value=""
+    addInput.value = "";
   }
 }
  
@@ -238,7 +213,7 @@ function createLi(){
   var ol = document.getElementById("todo-list");
   
   //clear the existing content of the <ol> element
-  ol.innerHTML=""
+  ol.innerHTML = "";
   
   // retrieve the todoArray from localStorage or initialize it as an empty array
   var todoArray = JSON.parse(localStorage.getItem("todoArray"))||[];
@@ -263,26 +238,24 @@ function createLi(){
   }
  
 }
- 
-// var removetext =
+
 // add list when clicked on add item button
 addBtn.addEventListener("submit", addLists);
  
-  // console.log("Updated array:", numbers);
+// console.log("Updated array:", numbers);
 function deleteElement(event) {
   // Sample array of numbers
-   console.log(event.target)
+   console.log(event.target);
    var deleteId = event.target.getAttribute("id")
-   var tempArr = []
+   var tempArr = [];
    var todoArray = JSON.parse(localStorage.getItem("todoArray"))||[];
    for(let i=0;i<todoArray.length;i++){
     if(todoArray[i].id != deleteId){
-      tempArr.push(todoArray[i])
+      tempArr.push(todoArray[i]);
     }
    }
-   localStorage.setItem("todoArray",JSON.stringify(tempArr))
-   createLi()
- 
+   localStorage.setItem("todoArray",JSON.stringify(tempArr));
+   createLi();
 }
  
 createLi();
