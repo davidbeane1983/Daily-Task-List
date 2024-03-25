@@ -1,4 +1,4 @@
-# **Project 1: Interactive Front-End Project: Daily Task List with Interactive Weather & News Updates**
+# **Interactive Front-End Project: Daily Task List with Interactive Weather & News Updates**
 
 # Purpose:
 The purpose of this project was to work in a group setting, and take everything we've learned in class over the past six weeks to create a real-world front-end application for our portfolios.
@@ -24,9 +24,9 @@ As a group, we followed the resources to create the Javascript, HTML, and CSS. H
 # Here were the responsibilities broken down:
 
 - David: Task list, HTML organization
-- Storm: Weather section and API
-- Zoe: News section and API
-- Stephanie: Styling, modal pop up and Bulma integration
+- Storm: Weather section and API + fixed merge conflicts
+- Zoe: News section and API, syntax, presentation
+- Stephanie: Styling, modal pop up and Bulma integration, readme
 
 First, we grabbed colors I liked more than Bulma's, and messed around with them for the weather palette. These were adjusted slightly as we went along to make something sharp, but still kept the colors in a teal-palette our group liked.
 
