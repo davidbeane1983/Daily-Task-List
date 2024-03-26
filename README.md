@@ -92,7 +92,7 @@ One cool feature we included was the day of the week, month, date, and year that
 Our group built a page that meets all of the project requirements where the the page:
 - uses CSS framework other than Bootstrap (see: Bulma styling)
 - is deployed to GitHub
-- is interactive and uses 2 server-size API's
+- is interactive and uses 2 server-side API's
 - has one pop up modal and client-side storage to store data
 - is responsive with a polished UI
 - has a clean repository
